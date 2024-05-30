@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Sensitive Content Blurrer",
+    "description": "Detects and blurs sensitive content on web pages.",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
